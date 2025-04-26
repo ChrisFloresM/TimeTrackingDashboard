@@ -1,14 +1,17 @@
-# Four Card Feature
+# Time Tracking Dashboard
 
-This is a FrontEnd mentor project, used to practice Responsive design.
+Project to practice responsive design using CSS Grid, along with the usage of fetch API to work with JSON data.
 
 Usage of:
 - Media queries
 - Responsive fonts
 - CSS Grid
+- fetch API
+
+Project still in works...
 
 ## **Desktop preview:**
-![desktop version preview](https://github.com/ChrisFloresM/FourCardComponent/blob/master/final/desktop.png)
+![desktop version preview]()
 
 ## **Mobile preview:**
-![Mobile version preview](https://github.com/ChrisFloresM/FourCardComponent/blob/master/final/mobile.png).
+![Mobile version preview]().
