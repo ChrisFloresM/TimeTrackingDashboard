@@ -1,7 +1,7 @@
 :root {
     /* =========== Colors =========== */
     --white: #FFF;
-    --black: #000;
+    --black: rgb(0, 0, 0);
 
     --navy950: #0E1323;
     --navy900: #1C204B;
@@ -66,7 +66,8 @@ html {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    padding: var(--spacing-200);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,23 +83,122 @@ body {
 .dashboard {
     max-width: 111.6rem;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
     "user work play study"
     "user excercise social selfcare";
     grid-gap: var(--spacing-400);
-    /* To remove */
-    background-color: var(--navy200);
 }
 
 /* User card */
 .dashboard__user {
     grid-area: user;
-    background-color: var(--pink400);
+    background-color: var(--navy900);
 }
 
-.dashboard__cat {
-    /* To remove */
-    background-color: var(--green400);
+.user-box {
+    height: 65%;
+    padding: var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+    font-weight: var(--light);
+    background-color: var(--purple600);
+}
+
+.user-box img {
+    max-width: 78px;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7);
+}
+
+.dashboard__user-name {
+    font-weight: var(--light);
+}
+
+.user-name-box {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Buttons */
+.buttons-box {
+    padding: var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-200);
+}
+
+.dashboard__button {
+    color: var(--purple500);
+    background-color: transparent;
+    border: none;
+    font-weight: var(--light);
+}
+
+.dashboard__button.selected {
+    color: var(--white);
+}
+
+/* categories cards */
+.dashboard__cat--work {
+    grid-area: work;
+    background: url("../img/icon-work.svg") no-repeat 90% -3% / 23% var(--orange300);
+}
+
+.dashboard__cat--play {
+    grid-area: play;
+    background: url("../img/icon-play.svg") no-repeat 90% -3% / 23% var(--blue300);
+}
+
+.dashboard__cat--study {
+    grid-area: study;
+    background: url("../img/icon-study.svg") no-repeat 90% -3% / 23% var(--pink400);
+}
+
+.dashboard__cat--excercise {
+    grid-area: excercise;
+    background: url("../img/icon-exercise.svg") no-repeat 90% -3% / 23% var(--green400);
+}
+
+.dashboard__cat--social {
+    grid-area: social;
+    background: url("../img/icon-social.svg") no-repeat 90% -3% / 23% var(--purple700);
+}
+
+.dashboard__cat--selfcare {
+    grid-area: selfcare;
+    background: url("../img/icon-self-care.svg") no-repeat 90% -3% / 23% var(--yellow300);
+}
+
+/* Category box */
+.category-box {
+    padding: var(--spacing-400);
+    margin-top: var(--spacing-400);
+    background-color: var(--navy900);
+}
+
+.category-name-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-300);
+}
+
+.dashboard__cat-name {
+    font-weight: var(--regular);
+}
+
+.dashboard__cat-time {
+    margin-bottom: var(--spacing-100);
+    font-weight: var(--light);
+}
+
+.dashboard__cat-last {
+    font-weight: var(--regular);
+    color: var(--navy200);
 }
 
 /* Utility classes */
@@ -142,4 +242,133 @@ body {
 
 .medium {
     font-weight: var(--medium);
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+/* Media queries */
+@media (max-width: 60rem) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 48rem) {
+    .dashboard {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "user user user"
+        "work play study"
+        "excercise social selfcare"
+    }
+
+    .user-box {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-300);
+    }
+
+    .dashboard__user-name {
+        font-size: var(--fs-preset-4);
+        line-height: var(--lh-preset-4);
+    }
+
+    .buttons-box {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-500);
+    }
+}
+
+@media (max-width: 35rem) {
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        padding: var(--spacing-300);
+    }
+
+    .user-box img {
+        max-width: 64px;
+    }
+
+    .dashboard {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        "user"
+        "work"
+        "play"
+        "study"
+        "excercise"
+        "social"
+        "selfcare"
+    }
+
+    .user-box {
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-300);
+    }
+
+    .buttons-box {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .category-name-box {
+        margin-bottom: var(--spacing-100);
+    }
+
+    .dashboard__cat-time {
+        font-size: var(--fs-preset-3);
+        line-height: var(--lh-preset-3);
+        margin-bottom: 0;
+    }
+
+    .time-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .dashboard-cat {
+        background-size: 50%;
+    }
+
+    .dashboard__cat--work {
+        grid-area: work;
+        background: url("../img/icon-work.svg") no-repeat 90% -15% / 20% var(--orange300);
+    }
+
+    .dashboard__cat--play {
+        grid-area: play;
+        background: url("../img/icon-play.svg") no-repeat 90% -15% / 20% var(--blue300);
+    }
+
+    .dashboard__cat--study {
+        grid-area: study;
+        background: url("../img/icon-study.svg") no-repeat 90% -20% / 18% var(--pink400);
+    }
+
+    .dashboard__cat--excercise {
+        grid-area: excercise;
+        background: url("../img/icon-exercise.svg") no-repeat 90% -15% / 20% var(--green400);
+    }
+
+    .dashboard__cat--social {
+        grid-area: social;
+        background: url("../img/icon-social.svg") no-repeat 90% -20% / 18% var(--purple700);
+    }
+
+    .dashboard__cat--selfcare {
+        grid-area: selfcare;
+        background: url("../img/icon-self-care.svg") no-repeat 90% -20% / 18% var(--yellow300);
+    }
+
 }
