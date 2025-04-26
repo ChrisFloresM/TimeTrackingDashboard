@@ -1,0 +1,145 @@
+:root {
+    /* =========== Colors =========== */
+    --white: #FFF;
+    --black: #000;
+
+    --navy950: #0E1323;
+    --navy900: #1C204B;
+    --navy800: #33397A;
+    --navy200: #BBC0FF;
+
+    /* Orange */
+    --orange300: #FF8B64;
+
+    /* Purple */
+    --purple700: #7335D2;
+    --purple600: #5747EA;
+    --purple500: #7078C9;
+
+    /* Blue */
+    --blue300: #55C2E6;
+
+    /* Pink */
+    --pink400: #FF5E7D;
+
+    /* Green */
+    --green400: #4BCF82;
+
+    /* Yellow */
+    --yellow300: #F1C75B;
+
+    /* Grey */
+    --grey200: #D8D8D8;
+
+    /* =========== Typography =========== */
+    --fs-preset-1: 5.6rem;
+    --fs-preset-2: 4rem;
+    --fs-preset-3: 3.2rem;
+    --fs-preset-4: 2.4rem;
+    --fs-preset-5: 1.8rem;
+    --fs-preset-6: 1.5rem;
+
+    --lh-preset-1: 6.6rem;
+    --lh-preset-2: 4.7rem;
+    --lh-preset-3: 3.8rem;
+    --lh-preset-4: 2.8rem;
+    --lh-preset-5: 2.1rem;
+    --lh-preset-6: 1.8rem;
+
+    --ls-global: 0px;
+
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+
+    /* =========== Spacing =========== */
+    --spacing-0: 0;
+    --spacing-100: 0.8rem;
+    --spacing-200: 1.6rem;
+    --spacing-300: 2.4rem;
+    --spacing-400: 3.2rem;
+    --spacing-500: 5rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-500);
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: var(--ls-global);
+    color: var(--white);
+    background-color: var(--navy950);
+}
+
+/* Main dashboard */
+.dashboard {
+    max-width: 111.6rem;
+    display: grid;
+    grid-template-areas:
+    "user work play study"
+    "user excercise social selfcare";
+    grid-gap: var(--spacing-400);
+    /* To remove */
+    background-color: var(--navy200);
+}
+
+/* User card */
+.dashboard__user {
+    grid-area: user;
+    background-color: var(--pink400);
+}
+
+.dashboard__cat {
+    /* To remove */
+    background-color: var(--green400);
+}
+
+/* Utility classes */
+.preset-1 {
+    font-size: var(--fs-preset-1);
+    line-height: var(--lh-preset-1);
+}
+
+.preset-2 {
+    font-size: var(--fs-preset-2);
+    line-height: var(--lh-preset-2);
+}
+
+.preset-3 {
+    font-size: var(--fs-preset-3);
+    line-height: var(--lh-preset-3);
+}
+
+.preset-4 {
+    font-size: var(--fs-preset-4);
+    line-height: var(--lh-preset-4);
+}
+
+.preset-5 {
+    font-size: var(--fs-preset-5);
+    line-height: var(--lh-preset-5);
+}
+
+.preset-6 {
+    font-size: var(--fs-preset-6);
+    line-height: var(--lh-preset-6);
+}
+
+.light {
+    font-weight: var(--light);
+}
+
+.regular {
+    font-weight: var(--regular);
+}
+
+.medium {
+    font-weight: var(--medium);
+}
