@@ -262,7 +262,12 @@ body {
 }
 
 @media (max-width: 48rem) {
+    body {
+        padding: var(--spacing-400);
+    }
+
     .dashboard {
+        width: 100%;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
         "user user user"
