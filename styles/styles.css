@@ -136,6 +136,12 @@ body {
     background-color: transparent;
     border: none;
     font-weight: var(--light);
+    transition: color 0.3s;
+}
+
+.dashboard__button:hover {
+    cursor: pointer;
+    color: var(--white);
 }
 
 .dashboard__button.selected {
@@ -309,7 +315,6 @@ body {
     }
 
     .user-box {
-        height: auto;
         flex-direction: row;
         align-items: center;
         gap: var(--spacing-300);

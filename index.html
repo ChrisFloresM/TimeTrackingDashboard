@@ -14,6 +14,9 @@
 	<!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="styles/reset.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+	<!-- Scripts -->
+	<script defer src="script.js"></script>
   <title>Frontend Mentor | Time tracking dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -33,80 +36,86 @@
 				</div>
 			</div>
 			<div class="buttons-box">
-				<button id="button-day" class="dashboard__button preset-5">Daily</button>
-				<button id="button-week" class="dashboard__button preset-5 selected">Weekly</button>
-				<button id="button-month" class="dashboard__button preset-5">Monthly</button>
+				<button class="dashboard__button preset-5" data-timeframe="daily">Daily</button>
+				<button class="dashboard__button preset-5 selected" data-timeframe="weekly">Weekly</button>
+				<button class="dashboard__button preset-5" data-timeframe="monthly">Monthly</button>
 			</div>
 		</section>
-		<section class="dashboard__cat dashboard__cat--work rounded">
+
+		<section class="dashboard__cat dashboard__cat--work rounded" data-category="Work">
 			<div class="category-box rounded">
 				<div class="category-name-box">
 					<p class="dashboard__cat-name preset-5">Work</p>
 					<img src="img/icon-ellipsis.svg" alt="Image of an ellipsis (3 dots)">
 				</div>
 				<div class="time-box">
-					<p class="dashboard__cat-time preset-1">32hrs</p>
-					<p class="dashboard__cat-last preset-6">Last Week - 36hrs</p>
+					<p class="dashboard__cat-time preset-1"><span class="current">32</span>hrs</p>
+					<p class="dashboard__cat-last preset-6">Last Week - <span class="previous">36</span>hrs</p>
 				</div>
 			</div>
 		</section>
-		<section class="dashboard__cat dashboard__cat--play rounded">
+
+		<section class="dashboard__cat dashboard__cat--play rounded" data-category="Play">
 			<div class="category-box rounded">
 				<div class="category-name-box">
 					<p class="dashboard__cat-name preset-5">Play</p>
 					<img src="img/icon-ellipsis.svg" alt="Image of an ellipsis (3 dots)">
 				</div>
 				<div class="time-box">
-					<p class="dashboard__cat-time preset-1">10hrs</p>
-					<p class="dashboard__cat-last preset-6">Last Week - 8hrs</p>
+					<p class="dashboard__cat-time preset-1"><span class="current">10</span>hrs</p>
+					<p class="dashboard__cat-last preset-6">Last Week - <span class="previous">8</span>hrs</p>
 				</div>
 			</div>
 		</section>
-		<section class="dashboard__cat dashboard__cat--study rounded">
+
+		<section class="dashboard__cat dashboard__cat--study rounded" data-category="Study">
 			<div class="category-box rounded">
 				<div class="category-name-box">
 					<p class="dashboard__cat-name preset-5">study</p>
 					<img src="img/icon-ellipsis.svg" alt="Image of an ellipsis (3 dots)">
 				</div>
 				<div class="time-box">
-					<p class="dashboard__cat-time preset-1">4hrs</p>
-					<p class="dashboard__cat-last preset-6">Last Week - 7hrs</p>
+					<p class="dashboard__cat-time preset-1"><span class="current">4</span>hrs</p>
+					<p class="dashboard__cat-last preset-6">Last Week - <span class="previous">7</span>hrs</p>
 				</div>
 			</div>
 		</section>
-		<section class="dashboard__cat dashboard__cat--excercise rounded">
+
+		<section class="dashboard__cat dashboard__cat--excercise rounded" data-category="Exercise">
 			<div class="category-box rounded">
 				<div class="category-name-box">
 					<p class="dashboard__cat-name preset-5">Excercise</p>
 					<img src="img/icon-ellipsis.svg" alt="Image of an ellipsis (3 dots)">
 				</div>
 				<div class="time-box">
-					<p class="dashboard__cat-time preset-1">4hrs</p>
-					<p class="dashboard__cat-last preset-6">Last Week - 5hrs</p>
+					<p class="dashboard__cat-time preset-1"><span class="current">4</span>hrs</p>
+					<p class="dashboard__cat-last preset-6">Last Week - <span class="previous">5</span>hrs</p>
 				</div>
 			</div>
 		</section>
-		<section class="dashboard__cat dashboard__cat--social rounded">
+
+		<section class="dashboard__cat dashboard__cat--social rounded" data-category="Social">
 			<div class="category-box rounded">
 				<div class="category-name-box">
 					<p class="dashboard__cat-name preset-5">Social</p>
 					<img src="img/icon-ellipsis.svg" alt="Image of an ellipsis (3 dots)">
 				</div>
 				<div class="time-box">
-					<p class="dashboard__cat-time preset-1">5hrs</p>
-					<p class="dashboard__cat-last preset-6">Last Week - 10hrs</p>
+					<p class="dashboard__cat-time preset-1"><span class="current">5</span>hrs</p>
+					<p class="dashboard__cat-last preset-6">Last Week - <span class="previous">10</span>hrs</p>
 				</div>
 			</div>
 		</section>
-		<section class="dashboard__cat dashboard__cat--selfcare rounded">
+
+		<section class="dashboard__cat dashboard__cat--selfcare rounded" data-category="Self Care">
 			<div class="category-box rounded">
 				<div class="category-name-box">
 					<p class="dashboard__cat-name preset-5">Self Care</p>
 					<img src="img/icon-ellipsis.svg" alt="Image of an ellipsis (3 dots)">
 				</div>
 				<div class="time-box">
-					<p class="dashboard__cat-time preset-1">2hrs</p>
-					<p class="dashboard__cat-last preset-6">Last Week - 2hrs</p>
+					<p class="dashboard__cat-time preset-1"><span class="current">2</span>hrs</p>
+					<p class="dashboard__cat-last preset-6">Last Week - <span class="previous">2</span>hrs</p>
 				</div>
 			</div>
 		</section>
